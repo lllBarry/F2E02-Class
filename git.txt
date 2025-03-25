@@ -1,0 +1,18 @@
+
+git cherry-pick C1 C2 C3
+git commit --amend
+git rebase -i C1
+git checkout -b ABC	查看/創建ABC標籤
+git branch -f      	查看當前分支
+git tag v0 C1	    	在C1標上 v0 的tag
+
+
+
+上傳檔案:
+git add . 
+git commit -m "commit 名稱"
+git push origin 分支名稱
+
+下載檔案
+git clone 網址
+git fetch
