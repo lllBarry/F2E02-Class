@@ -1,0 +1,142 @@
+/*
+優先級: !important > inline-style > id > class/屬性/偽類 > Tag > * > 繼承 
+           10000        1000       100      10        1
+屬性: 
+    class => .
+    id    => #
+inline-style:
+    Tag   => #
+    *     
+*/
+.news-list{
+    /* background-color: violet; */
+    color:blueviolet;
+}
+
+.info-list{
+    /* background-color: violet; */
+    color:blueviolet;
+}
+
+.news-list, .info-list{
+    /* background-color: violet; */
+    color:blueviolet;
+    margin-left: 200px;
+}
+.news-list .news-list-item{
+    color: chartreuse;
+    font-family: "Boldonse";
+}
+.news-list > li{
+    /* > 第一層子代的 li */
+    background-color: #ffa;
+}
+
+/* 屬性選取器 */
+input[type="text"],
+input[type="password"]{
+    border: 1px solid black;
+}
+a[class="link"]{
+    background-color: #faa;
+}
+div[class^="開頭"]{
+    margin: 10px;
+    background-color: #faa;
+}
+div[class$="結尾"]{
+    margin: 10px;
+    font-size: 30px;
+}
+div[class*="包含文字"]{
+    margin: 10px;
+    color: #48f;
+}
+div[class~="english"]{
+    margin: 10px;
+    /* 包含英文單字 */
+    border: 2px solid #729;
+
+}
+
+
+
+a{
+    color: #412828;
+}
+
+.link{
+    background-color: #cc9191;
+    color:rgb(128, 255, 0);
+}
+
+a.link#home-link{
+    /* 不用空格 =>同時有 a /.link /#home-link 才會吃到 */
+    color: aqua;
+}
+.first-content{
+    text-indent: 32px;
+}
+.title{
+    font-size: 30px;
+    font-weight: 700;
+}
+.title + p{
+    /* + =>選取到第一個p 
+    但如果第一個不是p => 沒有效果*/
+    text-indent: 32px;
+    /* 段落空格 */
+}
+.title ~ p{
+    /* 和 .title 同一層的所有 p */
+    color: blue;
+}
+
+.border-list{
+    margin: 100px;
+    background-color:antiquewhite;
+
+}
+/* 
+.border-list li{
+    border-bottom: 1px solid #bbb;
+}
+.border-list .border-none{
+    border: none;
+} */
+
+.list-item + .list-item{
+    border-top: 1px solid #bbb;
+}
+h3{
+    font-size: 30px;
+    text-decoration: wavy;
+}
+
+
+
+/* 偽類選取器 */
+/* visited > focus > hover > active */
+/* 觸發時間短放下面 不然會被覆蓋 */
+.website:visited{
+    background-color: #aaa
+    ;
+    color: #e11c1c;
+}
+.website:focus{
+    background-color: #8c6798;
+}
+.website:hover{
+    background-color: #ffa;
+}
+.website:active{
+    background-color: #a1d4eb;
+}
+label input:focus-visible{
+
+}
+
+
+.description{
+    text-align: right;
+}

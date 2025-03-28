@@ -96,7 +96,7 @@
 // 3. 是否有使用 new
 // 4. 是否有使用 call / apply / bind
 // 5. 是否使用 嚴格模式 Strict Mode  
-// "use strict";(type="module" 預設為嚴格模式)
+// "use strict";//(type="module" 預設為嚴格模式)
 
 
 // function hi(){
@@ -143,3 +143,14 @@
         
 //     },100);
 // }
+
+// const btn = document.querySelector("#btn");
+
+// btn.addEventListener("click", function () {
+//   const arr = [1, 2, 3];
+
+//   arr.forEach(function()  {
+//     console.log(this);
+//   });
+// });
+

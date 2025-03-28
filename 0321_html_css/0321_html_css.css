@@ -67,6 +67,13 @@
     margin: 10px;
     border: 2px solid #aaf;
     float: left;
+    box-sizing: border-box;
+    /* border-box 有包含border */
+    /* 預設為 box-sizing: content-box; */
+    
+}
+.box + .box + .box + .box{
+    background-color: #aaa;
 }
 .product-list{
     overflow: hidden;
