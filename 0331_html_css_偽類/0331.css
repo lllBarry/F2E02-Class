@@ -1,0 +1,237 @@
+body{
+    margin: 100px;
+}
+
+/* 同級元素第一個如果是.box  */
+/* .box:first-child{
+    background-color: #ffa;
+} */
+
+/* 同級元素第一個如果不是p =>無效 */
+/* .box p:first-child{
+    background-color: #aaf;
+} */
+
+/* 和p同層的第一個如果是p */
+/* p:first-child{
+    background-color: #afa;
+} */
+
+/* 加空格 => .box子層第一個 */
+/* .box :first-child{
+    background-color: #faa;
+} */
+
+
+/* live server 會在最後面加一段script
+需要再包一層才吃的到 */
+/* .box:last-child{
+    background-color: #ffa;
+} */
+
+/* .box p:last-child{
+    background-color: #aaf;
+} */
+
+/* p:last-child{
+    background-color: #afa;
+} */
+
+/* .box :last-child{
+    background-color: #faa;
+} */
+
+
+
+/* 第一個.box */
+/* .box:first-of-type{
+    background-color: #ffa;
+} */
+
+
+/* .box p:first-of-type{
+    background-color: #aaf;
+} */
+
+/* p:first-of-type{
+    background-color: #aaf;
+} */
+ 
+/* .box子層所有種類的第一個 */
+/* .box :first-of-type{
+    background-color: #aaf;
+} */
+
+/* .box:last-of-type{
+    background-color: #ffa;
+} */
+
+/* .box:last-of-type{
+    background-color: #ffa;
+} */
+
+/* .box p:last-of-type{
+    background-color: #aaf;
+} */
+
+/* p:last-of-type{
+    background-color: #afa;
+    } */
+    
+/* .box :last-of-type{
+    background-color: #faa;
+} */
+
+
+/* .box p:nth-of-type(2){
+    background-color: #ffa;
+}
+.box p:nth-child(2){
+    background-color: #ffa;
+}
+
+ul li:nth-child(odd){
+    background-color: #eee;
+}
+ul li:nth-child(even){
+    background-color: #eef;
+} */
+
+
+/* n+7 => 第7以後 */
+/* ul li:nth-child(n+7){
+    background-color: #ccc;
+}  */
+
+
+/* -n+7 => 第7以前 */
+/* ul li:nth-child(-n+7){
+    background-color: #ccc;
+} */
+
+
+
+/* ul li:nth-child(2n){
+    background-color: #f4eef5;
+} 
+ul li:nth-child(4n+3){
+    border: 3px solid rgb(211, 111, 18);
+}
+ul li:nth-child(n+8){
+    border-bottom: 5px dotted rgb(236, 120, 11);
+}
+*/
+
+/* 
+p:not(.point){
+    background-color: #ffa;
+}
+
+.box :not(div, span){
+    background-color: #ffa;
+} */
+
+/* .box :not(div):not(span){
+    background-color: aqua;
+} */
+
+
+
+
+header{
+    height: 80px;
+    background-color: #ffa;
+}
+
+nav{
+    text-align: center;
+}
+
+nav a { 
+    line-height: 80px;
+    padding: 40px 20px;
+}
+
+
+.text-space{
+    letter-spacing: 20px; 
+    word-spacing: 30px;
+}
+
+.text-space span{
+    vertical-align: top;
+}
+
+
+
+/* 
+.title{
+    display: inline;
+}
+.img, .content{
+    width: 50%;
+}
+
+.card{
+    display: flex;
+}
+.card:nth-child(even) .img{
+    order: 2;
+}
+.card:nth-child(odd) .content{
+    direction: rtl;
+} */
+
+
+/* 
+.card{
+    background-color: #ffa;
+    overflow: hidden;
+}
+.card .card-img{
+    width: 50%;
+    float: left;
+}
+.card-img img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.card:nth-of-type(2n) .card-img{
+    background-color: #faa;
+    float: right;
+}
+.card:nth-of-type(2n) .card-content{
+    direction: rtl;
+}
+.card-img{
+    margin: 0 20px 20px 0 ;
+    width: 100px !important;
+} */
+
+
+
+
+/* 
+.float-wrap{
+    margin-top: 100px;
+    background-color: #aaa;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.box:first-child{
+    background-color: #ffa;
+}
+.box:last-of-type{
+    background-color: #faa;
+}
+.clear{
+    clear: both;
+}
+.box2{
+    background-color: #faa;
+    height: 300px;
+} */
