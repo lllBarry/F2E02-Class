@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="dist/out.js"></script>
+    <script src="src/app.js" type="module"></script>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+<!--       原始碼 -> esbuild -> vite (5173 port) -> Rollup          -->
+      <!-- HMR Hot Module Replacement -->       
+<!-- 
+           json code
+           {
+            "dependencies": {
+              "dayjs": "^1.11.13"
+            },
+            "scripts": {
+              "build": "esbuild src/app.js --bundle --outfile=dist/out.js",
+              "dev": "esbuild src/app.js --bundle --outfile=dist/out.js --watch",
+              "parcel": "parcel index.html"
+            },
+            "devDependencies": {
+              "esbuild": "^0.25.2",
+              "parcel": "^2.14.4",
+              "vite": "^6.2.4"
+            }
+          } -->
+          
+  <main class="container mx-auto py-10">
+    <div x-data="hello">
+
+      <h1 class="text-6xl font-thin">Hello World</h1>
+      <!-- <a href="#" class="primary-btn">Click</a>
+      <a href="#" class="primary-btn">OK</a>
+      
+      <a href="#" class="btn btn-primary">654</a> -->
+      
+      <a href="#" @click.prevent="toggle" class="btn btn-error" id="closeBtn">Error</a>
+      <article x-show="show" id="article" class=" font-thin">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam non earum quo eum accusamus tempora ratione, enim eveniet fugiat, deleniti eligendi natus eius! Tempore fugiat eaque, culpa id dolor libero.
+      </article>
+      <input 
+        id="inputTxt" 
+        x-model="message" 
+        type="text" 
+        class="input input-neutral my-2 text-2xl">
+      <div 
+        id="returnTxt" 
+        x-text="message">
+        顯示...
+      </div>
+      <a href="#" @click.prevent="clearMessage" class="btn btn-error">Clear</a>
+      <hr class="my-4">
+      <input type="text" 
+        @keyup.enter="addFriend" 
+        x-model="friendName" 
+        class="input input-neutral my-2 text-2xl">
+      <button @click.prevent="addFriend" class="btn btn-error">ADD</button>
+      <ul>
+        <template x-for="f in friends">
+          <li x-text="f"></li>
+        </template>
+      </ul>
+    </div>
     
+
+
+  </main>    
 </body>
 </html>

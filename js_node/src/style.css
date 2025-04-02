@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.primary-btn{
+    @apply px-4 py-2 inline-block my-1 hover:bg-fuchsia-900 rounded bg-fuchsia-700 text-white text-lg;
+}
