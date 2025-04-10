@@ -1,0 +1,48 @@
+body{
+    margin: 100px 0 0 100px;
+}
+.box{
+    background-color: #fa0;
+    /* background-image: url("https://fakeimg.pl/300x200/"), url("https://fakeimg.pl/800x600/"); */
+    /* background-repeat: repeat no-repeat; */
+    /* background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: space; */
+    /* background-repeat: round; */
+    /* background-position: left top, right 20px bottom 20px; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* background-size: 300px 200px, 100px 100px; */
+    background-image: linear-gradient(to right bottom,rgb(0, 47, 255) ,rgb(169, 149, 241));
+
+    width: 300px;
+    height: 200px; 
+    box-sizing: border-box;
+}
+.box:hover{
+    /* background-color: red; */
+    /* background-image: linear-gradient(); */
+    border-radius: 50% 30% / 20% 40%;
+    border: 10px solid black;
+    outline: 10px dotted orange;
+    outline-offset: 10px;
+}
+input{
+    outline: none;
+    background-color: brown;
+
+}
+ul{
+    /* list-style-image:  url("https://fakeimg.pl/50x60/"); */
+    list-style-position: inside;
+    list-style-type: ":::";
+}
+.card{
+    width: 300px;
+    height: 300px;
+    background-color: burlywood;
+    overflow: auto;
+    /* opacity: 0.6; */
+    box-shadow: 10px 10px 10px 5px red;
+    /* 右邊 下面 模糊半徑 擴展半徑 */
+}
