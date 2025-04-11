@@ -1,0 +1,177 @@
+section{
+    max-width: 960px;
+    margin: 50px auto;
+}
+
+button{
+    font-size: 16px;
+}
+
+span{
+    font-size: 16px;
+    background-color: #faf;
+
+}
+
+.box-container{
+    font-size: 0px;
+    /* 解決空隙 */
+    /* text-align: center; */
+    /* 能夠讓 inline-block 置中 */
+}
+
+.box{
+    font-size: 16px;
+    width: 300px;
+    height: 300px;
+    /* display: inline; */
+    /* inline屬性沒有寬高 */
+
+    display: inline-block;
+}
+
+.box:nth-of-type(3n){
+    background-color: #afa;
+}
+.box:nth-of-type(3n+1){
+    background-color: #faa;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    /* display: none; */
+}
+
+.box:nth-of-type(3n+2){
+    background-color: #aaf;
+}
+
+.box-btn{
+    /* display: inline-block;預設 */
+    display: block;
+    margin: auto;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #aff;
+}
+.box-btn:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.text-content span{
+    color: red;
+    font-size: 30px;
+    display: block;
+}
+
+.card-wrap{
+    display: flex;
+    /* gap: 20px; */
+    column-gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.card{
+    height: 100px;
+}
+.card:nth-of-type(3n){
+    /* height: 300px; */
+    background-color: #afa;
+}
+.card:nth-of-type(3n+1){
+    background-color: #faa;
+}
+.card:nth-of-type(3n+2){
+    background-color: #aaf;
+}
+.card:nth-of-type(1){
+    width: 960px;
+}
+.card:nth-of-type(2),
+.card:nth-of-type(3)
+{
+    width: 470px;
+}
+.card:nth-of-type(4),
+.card:nth-of-type(5),
+.card:nth-of-type(6){
+    width: 306.666666666px;
+}
+.card:nth-of-type(7),
+.card:nth-of-type(8),
+.card:nth-of-type(9),
+.card:nth-of-type(10){
+    width: 225px;
+}
+
+.wrap{
+    display: flex;
+    background-color: #ffa;
+    gap: 20px;
+}
+.item{
+    height: 100px;
+    width: 100%;
+    background-color: #faa;
+}
+.item::first-letter{
+    font-size: 40px;
+    color: #aff;
+}
+
+
+
+.info-card{
+    display: flex;
+    column-gap: 20px;
+    /* row-gap: 40px; */
+    background-color: #faa;
+    padding: 30px;
+    /* margin: 40px 0; */
+}
+.info-card .image{
+    width: 100%;
+    aspect-ratio: 3/1;
+
+}
+.info-card .card-content{
+    width: 100%;
+    object-fit: cover;
+}
+.info-card .btn{
+    padding: 3px  10px;
+    border-radius: 5px;
+    background-color: #afa;
+}
+/* .info-card:last-of-type{
+    margin-bottom: 0;
+} */
+.info-card + .info-card{
+    margin-top: 40px;
+}
+
+.info-card:nth-of-type(2n){
+    flex-direction: row-reverse;
+}
+
+.flex-box-wrap{
+    background-color: #ffa;
+    height: 400px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    /* align-items: stretch;預設 */
+}
+
+.flex-box{
+    width: 100px;
+    height: 100px;
+    background-color: #fa0;
+}
+
