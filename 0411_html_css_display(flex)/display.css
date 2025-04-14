@@ -161,7 +161,7 @@ span{
 .flex-box-wrap{
     background-color: #ffa;
     height: 400px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     display: flex;
     gap: 10px;
     justify-content: start;
@@ -170,8 +170,23 @@ span{
 }
 
 .flex-box{
-    width: 100px;
+    /* width: 300px; */
+    flex-basis: 100px;/* 子層在主軸的長度    層級比 width 高*/
+    gap: 10px;
+    flex-grow: 1;
     height: 100px;
     background-color: #fa0;
+    
 }
-
+.box1{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+}
+.box2{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+}
+.box3{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+}
