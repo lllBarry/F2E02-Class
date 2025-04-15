@@ -1,0 +1,118 @@
+.list{
+    max-width: 960px;
+    background-color: #aaa;
+    margin: auto;    
+    font-size: 0;
+}
+.list li{
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    background-color: #faa;
+    margin: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+li:nth-of-type(12){
+    background-color: #f00;
+    position: relative;
+    inset: 0 0 0 20%;
+    /* left: 40px; */
+    z-index: 1;
+    /* right: 50px; */
+    /* top: 120px; */
+}
+li:nth-of-type(13){
+    /* position: relative; */
+}
+
+.box{
+    width: 200px;
+    height: 300px;
+    position: fixed;
+    background-color: #fa0;
+    opacity: .7;
+    right: 20px;
+    bottom: 20px;
+}
+
+.item{
+    border: 4px solid blue;
+    padding: 40px;
+    font-size: 30px;
+}
+.a{
+    position: relative;
+
+}
+
+.b{
+    /* position: relative; */
+
+}
+
+.c{
+    background-color: #fa0;
+    position: absolute;
+    /* left: 0;
+    bottom: 0; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+.card{
+    position: sticky;
+    background-color: rgb(159, 224, 133);
+    border: 4px solid #fa0;   
+    width: 300px;
+    padding: 30px 40px;
+    margin: auto;
+}
+.card .img{
+    position: relative;
+    overflow: cover;
+}
+img{
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+.card .tag{
+    position: absolute;
+    background-color: rgb(255, 223, 39);
+    right: 0;
+    top: 0;
+}
+.card h2{
+    font-size: 28px;
+}
+.card .shop{
+    position: absolute;
+    color: white;
+    width: 54px;
+    left: -14px;
+    top: 34px;
+    background-color: rgb(143, 79, 20);
+    text-align: center;
+}
+.card .hot{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color: #f00;
+    text-align: center;
+    color: white;
+    display: none;
+
+}
+
+.card:hover .hot{
+    display: block;
+}
+
