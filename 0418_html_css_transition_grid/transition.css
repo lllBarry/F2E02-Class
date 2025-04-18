@@ -1,0 +1,141 @@
+section{
+    max-width: 960px;
+    margin: 100px auto;
+    background-color: #aaa;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: #afa;
+    /* transition-property: transform, background-color, border-radius; */
+    /* transition-property: all; */
+    /* transition-duration: 1s, 1s, 1s; */
+    /* transition-duration: 300ms; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-delay: 0s, 0s, 1s; */
+    /* opacity: 0; */
+    transition: transform 1s, border-radius 1s 1s;
+}
+
+.box:hover{
+    opacity: 1;
+    border-radius: 50%;
+    background-color: red;
+    /* margin-left: 100px; */
+    transform: translateX(300px);
+    transition-property: transform, background-color, border-radius;
+    /* transition-property: opacity; */
+    /* transition-duration: 1s, 1s, 1s, 3s; */
+    transition-duration: 3s;
+    /* transition-delay: 1s, 0s, 0s, 0s; */
+}
+
+
+
+
+
+.card_group{
+    display: flex;
+    background-color: #afa;
+}
+.card{
+    background-color: rgb(218, 143, 221);
+    padding: 30px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+}
+.card_img{
+    overflow: hidden;
+    position: relative;
+}
+.card_img img{
+    width: 100%;
+}
+.card_img img:last-of-type{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    transform: translate(100%);
+    transition-property: transform;
+    /* pointer-events: none; */
+
+}
+
+.card_img:hover img:last-of-type{
+    transform: translate(0%);
+    transition-duration: 1s;
+}
+
+/* .card_img img:first-of-type::after{
+    content: "跳樓大拍賣";
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-weight: 700;
+    background-color: rgb(233, 160, 24);
+    z-index: 1;
+    text-align: center;
+    transform: translateY(100%);
+} */
+/* .card_img:hover .card_img img:first-of-type::after{
+    transform: translateY(0%);
+    transition-duration: 1s;
+    transition-delay: 1s;
+    
+} */
+
+.hint{
+    background-color: #fa0;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: -44px;
+    width: 100%;
+}
+.card_img:hover .hint{
+    bottom: 0;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+
+
+
+
+.tcard{
+    width: 300px;
+    padding: 30px;
+    background-color: #ffa;
+}
+.tcard_img{
+    height: 200px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.tcard_img img{
+    width: 100%;
+    object-fit: cover;
+}
+.thint{
+    background-color: #fa0;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: -44px;
+    width: 100%;
+}
+
+.card_img:hover .thint{
+    bottom: 0;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+
+
