@@ -14,6 +14,7 @@ header nav{
 }
 nav .menu-area{
     display: flex;
+    
 }
 .menu{
     position: relative;
@@ -31,6 +32,9 @@ nav .menu-area{
     display: flex;
 }
 
+.menu-btn{
+
+}
 
 
 .submenu-area{
@@ -79,7 +83,6 @@ nav .menu-area{
 .submenu-area a:hover::after{
     display: block;
 }
-
 .box{
     width: 100px;
     height: 100px;
