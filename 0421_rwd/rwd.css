@@ -1,0 +1,98 @@
+section{
+    background-color: #aaa;
+}
+.out-box{
+    margin: 100px auto;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #faa;
+    height: 300px;
+    /* display: flex; */
+}
+.box{
+    width: calc(50% - 10px);
+    height: 300px;
+    float: left;
+}
+
+.box:first-of-type{
+    background-color: #faa;
+}
+.box:last-of-type{
+    background-color: #afa;
+}
+.box + .box {
+    margin-left: 20px;
+}
+
+.aspect-img{
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    
+}
+.aspect-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.padding-img{
+    position: relative;
+    /* width: 600px; */
+    /* height: 300px; */
+    background-color: #fa0;
+    padding-bottom: 75%;
+    /*3:4 => 3 / 4 = 0.75 */
+}
+.padding-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* @media screen and (max-width:767px) {
+    .out-box{
+        display: block;
+        font-size: 30px;
+    }
+    .box{
+        width: 100%;
+    }
+}
+@media screen and (width <= 767px) {
+    .out-box{
+        display: block;
+        font-size: 30px;
+    }
+    .box{
+        width: 100%;
+    }
+}
+@media (max-width:767px) {
+    .out-box{
+        display: block;
+        font-size: 30px;
+    }
+    .box{
+        width: 100%;
+    }
+} */
+/* @media screen and (min-width: 768px) and (max-width: 1023px){
+    
+}
+@media screen and (768px <= width < 1024px){
+    
+} */
+@media screen and (min-width:768px){
+    .out-box{
+        background-color: #faa;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .out-box{
+        background-color: #afa;
+    }
+}
+
