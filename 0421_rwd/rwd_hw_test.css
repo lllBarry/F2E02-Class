@@ -1,6 +1,6 @@
 
 header{
-    background-color: #475;
+    background-color: rgb(116, 177, 137);
     /* height: 60px; */
 }
 nav{
@@ -14,7 +14,7 @@ nav{
     align-items: center;
 }
 .menu-area{
-    background-color: #475;
+    background-color: rgb(92, 134, 106);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -25,21 +25,24 @@ nav{
     display: none;
 }
 .menu{
+    color: #fff;
     position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
     cursor: pointer;
+    justify-content: space-between;
 }
-.menu:hover{
-    background-color: #976;
+.menu + .menu{
+    border-top: 1px solid #fff;
 }
-#menu0{
+
+#toggle-menu{
     display: none;
 }
-#menu0:checked ~ .menu-area{
-    display: block;
+#toggle-menu:checked ~ .menu-area{
+    display: flex;
 }
 
 
@@ -48,51 +51,69 @@ nav{
     flex-direction: column;
     position: relative;
     top: calc(100% + 10px);
-    left: 10px;
-    background-color: #475;
+    /* left: 10px; */
+    background-color: rgb(72, 121, 87);
     width: 100%;
     display: none;
 }
+.menu-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
 
-.submenu-area a{
+.submenu-area li{
     padding: 10px;
     position: relative;
 }
-
+main section{
+    display: flex;
+}
 .box{
     width: 100px;
     height: 100px;
-    
+    background-color: aquamarine;
+    border-radius: 15px;
 }
 input[type="checkbox"]{
     display: none;
 }
-#menu1:checked ~ li{
+#menu1:checked ~ ul{
+    /* ~ => 同層的所有 */
     display: flex;
 }
-#menu2:checked ~ li{
+.menu-btn{
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#menu2:checked ~ ul{
     display: flex;
 }
-#menu3:checked ~ li{
+#menu3:checked ~ ul{
     display: flex;
 }
-.submenu-area a::after{
+#menu1:checked + .menu-label i{
+    rotate: 180deg;
+}
+#menu2:checked + .menu-label i{
+    rotate: 180deg;
+}
+#menu3:checked + .menu-label i{
+    rotate: 180deg;
+}
+.submenu-area .submenu::after{
     content: "";
     width: 100%;
     height: 4px;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #347;
+    background-color: rgb(255, 255, 255);
     display: none;
 }
-.submenu-area a:hover{
-    background-color: #369;
-}
-.submenu-area a:hover::after{
-    display: block;
-}
-
 
 /* header平板以上 */
 @media ( min-width : 768px) {
@@ -100,32 +121,45 @@ input[type="checkbox"]{
         display: flex;
         flex-direction: row;
     }
-    header nav .menu-btn{
+    header nav .toggle-btn{
         display: none;
     }
     .menu-area{
+        background-color: rgb(116, 177, 137);
         display: flex;
         flex-direction: row;
         position: relative;
         width: auto;
     }
-
-
+    
+    
+    
     .menu-area .menu{
+        color: black;
         position: relative;
         padding: 0 20px;
         line-height: 60px;
+        border: none;
     }
+
+    .menu-label i{
+        position: relative;
+        top: -2px;
+        left: 4px;
+    }
+
     .submenu-area{
         position: absolute;
         display: none;
         z-index: 1;
+        background-color: rgb(116, 177, 137);
+
     }
     .submenu-area::before{
         content: "";
         border-top: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid #586;
+        border-bottom: 10px solid rgb(116, 177, 137);
         border-left: 10px solid transparent;
         position: absolute;
         top: -20px;
@@ -141,17 +175,31 @@ input[type="checkbox"]{
         top: -10px;
         z-index: -1;
     }
-    .menu:hover .submenu-area{
-        display: flex;
-    }
-    .menu:hover .submenu-area::after{
-        display: flex;
-    }
+
     .submenu-area a{
         z-index: 1;
     }
     input[type= "checkbox"]{
         display: none;
     }
+    /* .submenu-area a:hover{
+        background-color: rgb(88, 153, 105);
+    } */
+    .menu:hover .submenu-area{
+        display: flex;
+    }
+    .menu:hover .submenu-area::after{
+        display: flex;
+    }
+    .submenu-area .submenu:hover{
+        background-color: rgb(109, 158, 121);
+    }
+    .submenu-area .submenu:hover::after{
+        display: block;
+    }
+    .menu-label i{
+        display: none;
+    }
 
 }   
+
