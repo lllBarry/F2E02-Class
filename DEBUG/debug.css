@@ -1,0 +1,156 @@
+header {
+    background-color: #c4c8da;
+}
+
+header nav {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 60px;
+    position: relative;
+}
+.logo{
+    width: 90px;
+    height: 60px;
+    display: flex;
+    padding: 6px;
+}
+.logo img{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    background-color: #aaa;
+    margin: 100px auto;
+    max-width: 1000px;
+}
+
+.menu-area {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #c4c8da;
+}
+
+.menu {
+    padding: 0 20px;
+    position: relative;
+}
+
+.submenu-area {
+    display: none;
+    position: relative;
+    background-color: #9ba1bd;
+    width: 100%;
+    /* top: 70px;
+    left: 20px; /
+    / text-align: center; */
+}
+
+.submenu-area::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #c4c8da;
+}
+
+.submenu-area::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -20px;
+}
+.menu + .menu,
+.submenu + .submenu{
+    border-top: 1px solid #ffffff;
+}
+/* .menu:hover .submenu-area {
+    display: block;
+} */
+.toggle-menu:checked ~.menu-area{
+    display: block;
+}
+.toggle-submenu{
+    /* display: none; */
+}
+
+
+#toggle-submenu1:checked + .submenu-area{
+    display: flex;
+ }
+#toggle-submenu2:checked + .submenu-area{
+    display: flex;
+ }
+#toggle-submenu3:checked + .submenu-area{
+    display: flex;
+ }
+.toggle-menu{
+    display: none;
+}
+.toggle-menu-btn{
+    display: flex;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: rgb(88, 88, 88);
+    cursor: pointer;
+    justify-content: space-between;
+}
+.submenu{
+    padding: 0 10px;
+    position: relative;
+}
+
+/* header 平板以上 */
+@media (min-width: 768px) {
+    .menu-area {
+    display: flex;
+    position: relative;
+    top: 0;
+    background-color: #c4c8da;
+    padding-bottom: 0;
+    }
+
+.icon {
+    display: none;
+    }
+    .submenu-area {
+        display: none;
+        position: absolute;
+        background-color: #c4c8da;
+        width: 100%;
+        top: 70px;
+        left: 20px;
+        text-align: center;
+    }
+    .menu{
+        border-top: none;
+    }
+    .fas.fa-sort-down{
+        display: none;
+    }
+    .menu-toggle-icon {
+        display: block;
+    }
+    #toggle-menu:checked ~.menu-area{
+        display: flex;
+    }
+    i.fas.fa-bars{
+        display: none;
+    }
+    .menu + .menu,
+.submenu + .submenu{
+    border-top: 0px solid #ffffff;
+}
+}

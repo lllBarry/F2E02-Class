@@ -1,4 +1,3 @@
-
 header{
     background-color: rgb(116, 177, 137);
     /* height: 60px; */
@@ -12,17 +11,21 @@ nav{
     line-height: 60px;
     position: relative;
     align-items: center;
+    /* overflow: hidden; */
 }
 .menu-area{
     background-color: rgb(92, 134, 106);
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 100%;
     padding: 0 20px;
-    display: none;
+    opacity: 0;
+    /* display: none; */
+    transition: all;
+    transition-duration:.5s;
 }
 .menu{
     color: #fff;
@@ -37,12 +40,21 @@ nav{
 .menu + .menu{
     border-top: 1px solid #fff;
 }
+.menu-btn{
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50%;
+}
 
 #toggle-menu{
     display: none;
 }
 #toggle-menu:checked ~ .menu-area{
     display: flex;
+    opacity: 1;
+    left: 0%;
+    transition: all;
+    transition-duration: .2s;
 }
 
 
@@ -57,12 +69,19 @@ nav{
     display: none;
 }
 .menu-label{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
+    position: relative;
 }
-
+.menu-label i{
+    position: absolute;
+    right: 20px;
+    transform: translateY(120%);
+    transition: all;
+    transition-duration: .5s;
+}
+.submenu + .submenu{
+    border-top: 1px solid gray;
+}
 .submenu-area li{
     padding: 10px;
     position: relative;
@@ -76,34 +95,29 @@ main section{
     background-color: aquamarine;
     border-radius: 15px;
 }
+input[type="radio"],
 input[type="checkbox"]{
     display: none;
 }
-#menu1:checked ~ ul{
+
+#toggle-submenu1:checked ~ ul,
+#toggle-submenu2:checked ~ ul,
+#toggle-submenu3:checked ~ ul{
     /* ~ => 同層的所有 */
     display: flex;
-}
-.menu-btn{
-    cursor: pointer;
-    padding: 20px;
-    border-radius: 50%;
+    transition: all;
+    transition-duration: .5s;
 }
 
-#menu2:checked ~ ul{
-    display: flex;
+
+#toggle-submenu1:checked + .menu-label i,
+#toggle-submenu2:checked + .menu-label i,
+#toggle-submenu3:checked + .menu-label i{
+    transform: scaleY(-1) translateY(-150%);
+    transition: all;
+    transition-duration: .5s;
 }
-#menu3:checked ~ ul{
-    display: flex;
-}
-#menu1:checked + .menu-label i{
-    rotate: 180deg;
-}
-#menu2:checked + .menu-label i{
-    rotate: 180deg;
-}
-#menu3:checked + .menu-label i{
-    rotate: 180deg;
-}
+
 .submenu-area .submenu::after{
     content: "";
     width: 100%;
@@ -116,20 +130,25 @@ input[type="checkbox"]{
 }
 
 /* header平板以上 */
+@media ( max-width : 767px) {
+
+}
 @media ( min-width : 768px) {
     header nav{
         display: flex;
         flex-direction: row;
     }
-    header nav .toggle-btn{
+    header nav .toggle-menu-btn{
         display: none;
     }
     .menu-area{
         background-color: rgb(116, 177, 137);
-        display: flex;
+        display: flex; 
         flex-direction: row;
         position: relative;
         width: auto;
+        left: 0;
+        opacity: 1;
     }
     
     
