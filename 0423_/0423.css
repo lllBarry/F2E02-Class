@@ -1,0 +1,28 @@
+section {
+  max-width: 1000px;
+  margin: 100px auto;
+  background-color: #aaa;
+  display: flex;
+  /* gap: 30px; */
+  flex-wrap: wrap;
+}
+
+[class*="col-"] {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.card {
+  background-color: #ffa;
+  padding: 10px;
+  margin: 15px;
+}
