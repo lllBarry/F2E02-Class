@@ -1,0 +1,173 @@
+.row{
+    text-align: center;
+}
+.box-sec{
+    max-width: 1000px;
+    background-color: #aaa;
+    margin: 100px auto;
+    
+}
+.box{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fa0;
+    /* animation-name: boxxx; */
+    animation-duration: 2s;
+    animation-timing-function:
+    cubic-bezier(0,1,.9,.01);
+    /* animation-delay: .5s; */
+    /* animation-iteration-count: infinite; */
+    animation-direction: alternate;
+    animation-fill-mode: none;
+}
+
+/* @keyframes boxxx{
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: 100%;
+    }
+} */
+@keyframes boxxx{
+    0%{
+        /* margin-left: 0; */
+        background-color: #ffa;
+        top: 100px;
+    }
+    30%{
+        width: 300px;
+    }
+    50%{
+        background-color: #afa;
+        top: 55px;
+
+    }
+    70%{
+        background-color: #c0f;
+        bottom: 40px;    
+    }
+    
+    100%{
+        /* margin-left: 100%; */
+        background-color: #faf;
+        left: 80%;
+    }
+}
+/* .animation-sec{
+    background-color: purple;
+    margin: 100px auto;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "aaa . . "
+    " . bbb ."
+    " . . ccc";
+
+    animation-name: boxsss;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+}
+.animation-box{
+    background-color: plum;
+    width: 60px;
+    height: 60px;
+}
+.animation-box1{
+    grid-area: aaa;
+}
+.animation-box2{
+    grid-area: bbb; 
+}
+.animation-box3{
+    grid-area: ccc;
+    
+}
+
+@keyframes boxsss{
+
+    0%{
+    }
+    25%{
+        grid-template-areas: 
+        "aaa aaa aaa"
+        "bbb bbb bbb"
+        "ccc ccc ccc";
+    }
+    50%{
+        grid-template-areas: 
+        "aaa . . "
+        " . bbb ."
+        " . . ccc";
+    }
+    100%{
+        grid-template-areas: 
+        "aaa bbb ccc"
+        "aaa bbb ccc"
+        "aaa bbb ccc";
+    }
+
+} */
+
+.animation-group{
+    background-color: purple;
+    margin: 100px auto;
+    width: 200px;
+    height: 200px;
+    /* padding: 10px; */
+    border: 10px solid #aaa;
+    position: relative;    
+}
+.animation-box{
+    position: absolute;
+    background-color: plum;
+    width: 60px;
+    height: 60px;
+    /* animation-name: grow;
+    animation-duration: .5s;
+    animation-iteration-count: infinite; */
+    animation: grow .5s infinite;
+}
+.animation-box1{
+    top: 0;
+    left: 0;
+}
+.animation-box2{
+    inset: 0;
+    margin: auto;
+}
+.animation-box3{
+    bottom: 0;
+    right: 0;    
+}
+
+@keyframes grow{
+
+    0%{
+        width: 60px;
+        height: 60px;
+    }
+    25%{
+        width: 180px;
+        height: 60px;
+    }
+    50%{
+        width: 60px;
+        height: 60px;
+    }
+    75%{
+        width: 60px;
+        height: 180px;
+    }
+    100%{
+        width: 60px;
+        height: 60px;
+    }
+
+}
